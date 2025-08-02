@@ -3,165 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon - Gourmet Bites</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Satya Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet"/>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
     }
 
     body {
-      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #fffaf4;
+      color: #333;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
+      height: 80vh;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       text-align: center;
-      padding: 20px;
-      animation: fadeIn 1.5s ease-in-out;
+      flex-direction: column;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
-    h1 {
+    header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 4rem;
       margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-      animation: slideDown 1s ease-in-out;
     }
 
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-      animation: slideUp 1s ease-in-out;
+    header p {
+      font-size: 1.4rem;
     }
 
-    #countdown {
-      display: flex;
-      gap: 15px;
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
+    nav {
+      background-color: #6b2f2f;
+      padding: 10px 0;
+      text-align: center;
     }
 
-    .time-box {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 15px;
-      border-radius: 10px;
-      min-width: 70px;
-    }
-
-    .time-box span {
-      display: block;
-      font-size: 1.8rem;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
       font-weight: bold;
     }
 
-    .socials {
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .about, .menu, .contact {
+      margin-bottom: 60px;
+    }
+
+    .about h2, .menu h2, .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #6b2f2f;
+    }
+
+    .menu-items {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
 
-    .socials a {
+    .menu-item {
+      width: 250px;
+      background-color: #fff5eb;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #3d1f1f;
       color: white;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-
-    .socials a:hover {
-      transform: scale(1.2);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to   { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to   { transform: translateY(0); opacity: 1; }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
-
-      .time-box {
-        min-width: 50px;
-        padding: 10px;
-      }
+      text-align: center;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <h1>Gourmet Bites</h1>
-  <p>Delicious flavors are on their way. Our restaurant is opening soon!</p>
 
-  <div id="countdown">
-    <div class="time-box">
-      <span id="days">00</span>Days
+<header>
+  <h1>Satya Restaurant</h1>
+  <p>Authentic Taste. Timeless Experience.</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#menu">Menu</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Satya Restaurant, where flavor meets tradition. We serve authentic Indian cuisine made with love, spices, and locally sourced ingredients. Whether you're dining in or ordering out, we guarantee a delightful experience.
+    </p>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Featured Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1604908177225-7631e3e8f1f6" alt="Biryani" />
+        <h3>Hyderabadi Biryani</h3>
+        <p>Spiced rice with marinated meat</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1631515243341-f1e880d7e07f" alt="Paneer Tikka" />
+        <h3>Paneer Tikka</h3>
+        <p>Grilled cottage cheese with spices</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1621241844543-34480db78b53" alt="Dosa" />
+        <h3>Masala Dosa</h3>
+        <p>South Indian crispy crepe with potato</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1589308078054-832c18fdb76d" alt="Gulab Jamun" />
+        <h3>Gulab Jamun</h3>
+        <p>Sweet milk-solid dessert</p>
+      </div>
     </div>
-    <div class="time-box">
-      <span id="hours">00</span>Hours
-    </div>
-    <div class="time-box">
-      <span id="minutes">00</span>Minutes
-    </div>
-    <div class="time-box">
-      <span id="seconds">00</span>Seconds
-    </div>
-  </div>
+  </section>
 
-  <div class="socials">
-    <a href="#" title="Instagram">&#x1F4F8;</a>
-    <a href="#" title="Facebook">&#x1F464;</a>
-    <a href="#" title="Twitter">&#x1F426;</a>
-  </div>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📍 123 Spice Street, Hyderabad, India</p>
+    <p>📞 +91 98765 43210</p>
+    <p>📧 contact@satyarestaurant.com</p>
+  </section>
+</div>
 
-  <script>
-    const launchDate = new Date("December 1, 2025 12:00:00").getTime();
+<footer>
+  <p>&copy; 2025 Satya Restaurant. All rights reserved.</p>
+</footer>
 
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance < 0) {
-        clearInterval(countdown);
-        document.getElementById("countdown").innerHTML = "We're open!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").textContent = days.toString().padStart(2, '0');
-      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
-    }, 1000);
-  </script>
 </body>
 </html>
